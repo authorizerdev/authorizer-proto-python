@@ -1,0 +1,11 @@
+version: v2
+# Python protobuf + gRPC stubs for authorizer.v1. Generated with
+# --include-imports so google/api and buf/validate are importable at runtime
+# (Python has no equivalent of Go's published-module resolution). The default
+# top-level import segments emitted by protoc are rewritten to the
+# authorizer_proto package by scripts/generate.sh.
+plugins:
+  - remote: buf.build/protocolbuffers/python:v27.3
+    out: gen
+  - remote: buf.build/grpc/python:v1.66.0
+    out: gen

@@ -1,0 +1,38 @@
+name: Regenerate
+
+# Pull the current schema from the Buf Schema Registry, regenerate the stubs,
+# and open a PR if anything changed. The "bump the proto version" mechanism —
+# no human ever clones the main repo and hand-copies files.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bufbuild/buf-setup-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Regenerate
+        run: ./scripts/generate.sh
+      - name: Import smoke test
+        run: |
+          pip install -e ".[grpc]"
+          python -c "from authorizer_proto.authorizer.v1 import admin_pb2, authorizer_pb2; print('OK')"
+      - name: Open PR on change
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: regenerate stubs from BSR"
+          title: "chore: regenerate stubs from BSR"
+          body: |
+            Automated regeneration from `buf.build/authorizerdev/authorizer`.
+            Review the diff before merging.
+          branch: chore/regenerate-stubs
+          delete-branch: true

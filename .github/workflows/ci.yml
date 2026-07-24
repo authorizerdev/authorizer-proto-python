@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e ".[grpc]"
+      - name: Import smoke test
+        run: |
+          python -c "
+          from authorizer_proto.authorizer.v1 import (
+              admin_pb2, admin_pb2_grpc, authorizer_pb2, authorizer_pb2_grpc,
+              common_pb2, types_pb2, errors_pb2, pagination_pb2,
+          )
+          adm = admin_pb2.DESCRIPTOR.services_by_name['AuthorizerAdminService']
+          pub = authorizer_pb2.DESCRIPTOR.services_by_name['AuthorizerService']
+          assert len(adm.methods) > 0 and len(pub.methods) > 0
+          print('OK', len(adm.methods), 'admin,', len(pub.methods), 'public RPCs')
+          "
+      - name: Build wheel + sdist
+        run: |
+          pip install build twine
+          python -m build
+          twine check dist/*
