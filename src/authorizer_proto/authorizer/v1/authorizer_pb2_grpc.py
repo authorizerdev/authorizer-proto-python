@@ -136,6 +136,41 @@ class AuthorizerServiceStub(object):
                 request_serializer=authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsRequest.SerializeToString,
                 response_deserializer=authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsResponse.FromString,
                 _registered_method=True)
+        self.TotpMfaSetup = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/TotpMfaSetup',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.TotpMfaSetupRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+                _registered_method=True)
+        self.WebauthnRegistrationOptions = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnRegistrationOptions',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsResponse.FromString,
+                _registered_method=True)
+        self.WebauthnRegistrationVerify = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnRegistrationVerify',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationVerifyRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+                _registered_method=True)
+        self.WebauthnLoginOptions = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnLoginOptions',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsResponse.FromString,
+                _registered_method=True)
+        self.WebauthnLoginVerify = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnLoginVerify',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginVerifyRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+                _registered_method=True)
+        self.WebauthnCredentials = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnCredentials',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsResponse.FromString,
+                _registered_method=True)
+        self.WebauthnDeleteCredential = channel.unary_unary(
+                '/authorizer.v1.AuthorizerService/WebauthnDeleteCredential',
+                request_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialResponse.FromString,
+                _registered_method=True)
 
 
 class AuthorizerServiceServicer(object):
@@ -348,6 +383,83 @@ class AuthorizerServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def TotpMfaSetup(self, request, context):
+        """=== TOTP enrollment ===
+
+        TotpMfaSetup generates a fresh TOTP secret, QR image and recovery codes and
+        creates an unverified TOTP enrollment. Same dual-mode permissions as
+        EmailOtpMfaSetup / SmsOtpMfaSetup: an authenticated caller (bearer token)
+        adding a second factor from the settings screen, or a caller in the
+        withheld first-time-offer state identified by the MFA session cookie plus
+        email/phone_number. The enrollment becomes active only once VerifyOtp is
+        called with is_totp=true.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnRegistrationOptions(self, request, context):
+        """=== WebAuthn / passkeys ===
+
+        Registration and login are two-step ceremonies: an `options` call returns
+        the JSON the browser passes to navigator.credentials.create()/get(), and a
+        `verify` call consumes the browser's response. The options calls are public
+        for the same reason the login/signup RPCs are — a caller may be mid-login
+        with no bearer token yet; the verify calls establish or continue the
+        session. Listing and deleting a passkey act on the CALLER'S OWN
+        credentials and therefore require authentication.
+
+        WebauthnRegistrationOptions begins a passkey registration ceremony and
+        returns JSON-encoded PublicKeyCredentialCreationOptions. email /
+        phone_number are used only on the MFA-session-cookie path to resolve which
+        user is enrolling; they are ignored for a bearer-authenticated caller.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnRegistrationVerify(self, request, context):
+        """WebauthnRegistrationVerify verifies the attestation and stores the passkey.
+        Returns AuthResponse: access_token is set only on the MFA-session-cookie
+        enrollment path (which completes a login); an ordinary settings-page caller
+        gets a message-only response.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnLoginOptions(self, request, context):
+        """WebauthnLoginOptions begins a passkey login ceremony and returns
+        JSON-encoded PublicKeyCredentialRequestOptions. Usernameless (discoverable
+        credential) when email is omitted.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnLoginVerify(self, request, context):
+        """WebauthnLoginVerify verifies a passkey assertion and logs the user in.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnCredentials(self, request, context):
+        """WebauthnCredentials lists the authenticated caller's own passkeys.
+        Requires authentication.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def WebauthnDeleteCredential(self, request, context):
+        """WebauthnDeleteCredential deletes one of the authenticated caller's own
+        passkeys by id. Requires authentication.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AuthorizerServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -470,6 +582,41 @@ def add_AuthorizerServiceServicer_to_server(servicer, server):
                     servicer.ListPermissions,
                     request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsRequest.FromString,
                     response_serializer=authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsResponse.SerializeToString,
+            ),
+            'TotpMfaSetup': grpc.unary_unary_rpc_method_handler(
+                    servicer.TotpMfaSetup,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.TotpMfaSetupRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.SerializeToString,
+            ),
+            'WebauthnRegistrationOptions': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnRegistrationOptions,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsResponse.SerializeToString,
+            ),
+            'WebauthnRegistrationVerify': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnRegistrationVerify,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationVerifyRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.SerializeToString,
+            ),
+            'WebauthnLoginOptions': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnLoginOptions,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsResponse.SerializeToString,
+            ),
+            'WebauthnLoginVerify': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnLoginVerify,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginVerifyRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_types__pb2.AuthResponse.SerializeToString,
+            ),
+            'WebauthnCredentials': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnCredentials,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsResponse.SerializeToString,
+            ),
+            'WebauthnDeleteCredential': grpc.unary_unary_rpc_method_handler(
+                    servicer.WebauthnDeleteCredential,
+                    request_deserializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -1121,6 +1268,195 @@ class AuthorizerService(object):
             '/authorizer.v1.AuthorizerService/ListPermissions',
             authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsRequest.SerializeToString,
             authorizer_dot_v1_dot_authorizer__pb2.ListPermissionsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def TotpMfaSetup(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/TotpMfaSetup',
+            authorizer_dot_v1_dot_authorizer__pb2.TotpMfaSetupRequest.SerializeToString,
+            authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnRegistrationOptions(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnRegistrationOptions',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsRequest.SerializeToString,
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationOptionsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnRegistrationVerify(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnRegistrationVerify',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnRegistrationVerifyRequest.SerializeToString,
+            authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnLoginOptions(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnLoginOptions',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsRequest.SerializeToString,
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginOptionsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnLoginVerify(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnLoginVerify',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnLoginVerifyRequest.SerializeToString,
+            authorizer_dot_v1_dot_types__pb2.AuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnCredentials(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnCredentials',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsRequest.SerializeToString,
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnCredentialsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def WebauthnDeleteCredential(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerService/WebauthnDeleteCredential',
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialRequest.SerializeToString,
+            authorizer_dot_v1_dot_authorizer__pb2.WebauthnDeleteCredentialResponse.FromString,
             options,
             channel_credentials,
             insecure,

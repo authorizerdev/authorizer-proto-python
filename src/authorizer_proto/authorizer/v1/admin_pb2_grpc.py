@@ -278,6 +278,136 @@ class AuthorizerAdminServiceStub(object):
                 request_serializer=authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataRequest.SerializeToString,
                 response_deserializer=authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataResponse.FromString,
                 _registered_method=True)
+        self.CreateOrganization = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/CreateOrganization',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrganizationRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrganizationResponse.FromString,
+                _registered_method=True)
+        self.UpdateOrganization = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/UpdateOrganization',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationResponse.FromString,
+                _registered_method=True)
+        self.DeleteOrganization = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/DeleteOrganization',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationResponse.FromString,
+                _registered_method=True)
+        self.GetOrganization = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/GetOrganization',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrganizationRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrganizationResponse.FromString,
+                _registered_method=True)
+        self.Organizations = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/Organizations',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.OrganizationsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.OrganizationsResponse.FromString,
+                _registered_method=True)
+        self.UserOrganizations = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/UserOrganizations',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.UserOrganizationsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.UserOrganizationsResponse.FromString,
+                _registered_method=True)
+        self.AddOrgMember = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/AddOrgMember',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.AddOrgMemberRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.AddOrgMemberResponse.FromString,
+                _registered_method=True)
+        self.RemoveOrgMember = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/RemoveOrgMember',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberResponse.FromString,
+                _registered_method=True)
+        self.OrgMembers = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/OrgMembers',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.OrgMembersRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.OrgMembersResponse.FromString,
+                _registered_method=True)
+        self.RequestOrgDomain = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/RequestOrgDomain',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainResponse.FromString,
+                _registered_method=True)
+        self.VerifyOrgDomain = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/VerifyOrgDomain',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainResponse.FromString,
+                _registered_method=True)
+        self.AddVerifiedOrgDomain = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/AddVerifiedOrgDomain',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainResponse.FromString,
+                _registered_method=True)
+        self.OrgDomains = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/OrgDomains',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.OrgDomainsRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.OrgDomainsResponse.FromString,
+                _registered_method=True)
+        self.DeleteOrgDomain = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/DeleteOrgDomain',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainResponse.FromString,
+                _registered_method=True)
+        self.CreateOrgOidcConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/CreateOrgOidcConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionResponse.FromString,
+                _registered_method=True)
+        self.UpdateOrgOidcConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/UpdateOrgOidcConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionResponse.FromString,
+                _registered_method=True)
+        self.DeleteOrgOidcConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/DeleteOrgOidcConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionResponse.FromString,
+                _registered_method=True)
+        self.GetOrgOidcConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/GetOrgOidcConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionResponse.FromString,
+                _registered_method=True)
+        self.CreateOrgSamlConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/CreateOrgSamlConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionResponse.FromString,
+                _registered_method=True)
+        self.UpdateOrgSamlConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/UpdateOrgSamlConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionResponse.FromString,
+                _registered_method=True)
+        self.DeleteOrgSamlConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/DeleteOrgSamlConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionResponse.FromString,
+                _registered_method=True)
+        self.GetOrgSamlConnection = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/GetOrgSamlConnection',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionResponse.FromString,
+                _registered_method=True)
+        self.CreateScimEndpoint = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/CreateScimEndpoint',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.FromString,
+                _registered_method=True)
+        self.RotateScimToken = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/RotateScimToken',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.RotateScimTokenRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.FromString,
+                _registered_method=True)
+        self.DeleteScimEndpoint = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/DeleteScimEndpoint',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointResponse.FromString,
+                _registered_method=True)
+        self.GetScimEndpoint = channel.unary_unary(
+                '/authorizer.v1.AuthorizerAdminService/GetScimEndpoint',
+                request_serializer=authorizer_dot_v1_dot_admin__pb2.GetScimEndpointRequest.SerializeToString,
+                response_deserializer=authorizer_dot_v1_dot_admin__pb2.GetScimEndpointResponse.FromString,
+                _registered_method=True)
 
 
 class AuthorizerAdminServiceServicer(object):
@@ -731,6 +861,230 @@ class AuthorizerAdminServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateOrganization(self, request, context):
+        """=== Organizations ===
+
+        Org-scoped ops accept EITHER a platform super-admin or that org's own
+        org-admin (the reserved namespaced role constants.OrgRoleAdmin). The
+        service layer sources the org id for the authorization check from the
+        resource AFTER loading it by id — never from a caller-supplied org id
+        checked beforehand — so these RPCs inherit that guarantee unchanged.
+
+        CreateOrganization creates an organization. `name` is a unique, URL-safe
+        slug. Requires super-admin auth.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UpdateOrganization(self, request, context):
+        """UpdateOrganization updates an organization's slug, display name, or
+        enabled state. Requires super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteOrganization(self, request, context):
+        """DeleteOrganization deletes an organization by id. Requires super-admin auth.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetOrganization(self, request, context):
+        """GetOrganization returns a single organization by id. Requires super-admin
+        or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Organizations(self, request, context):
+        """Organizations returns a paginated list of organizations. Requires
+        super-admin auth.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UserOrganizations(self, request, context):
+        """UserOrganizations returns the organizations a user belongs to, with that
+        user's per-org roles. Requires super-admin auth.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def AddOrgMember(self, request, context):
+        """AddOrgMember binds a user to an organization with an optional set of
+        per-org roles. Requires super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def RemoveOrgMember(self, request, context):
+        """RemoveOrgMember removes a user's membership of an organization. Requires
+        super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def OrgMembers(self, request, context):
+        """OrgMembers returns a paginated list of an organization's members, with
+        resolved user identity for display. Requires super-admin or that org's
+        org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def RequestOrgDomain(self, request, context):
+        """=== Organization verified domains ===
+
+        RequestOrgDomain starts DNS ownership verification for a domain and returns
+        the TXT record to publish. Requires super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def VerifyOrgDomain(self, request, context):
+        """VerifyOrgDomain checks the published TXT record and, on success, marks the
+        domain verified. Requires super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def AddVerifiedOrgDomain(self, request, context):
+        """AddVerifiedOrgDomain marks a domain verified WITHOUT a DNS challenge.
+        Super-admin only by design — it bypasses proof of ownership, and a domain
+        verified for one org cannot be claimed by another.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def OrgDomains(self, request, context):
+        """OrgDomains returns a paginated list of an organization's domains. Requires
+        super-admin or that org's org-admin.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteOrgDomain(self, request, context):
+        """DeleteOrgDomain removes a domain claim. The org is resolved from the stored
+        row, so authorization is checked against the domain's real owner.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateOrgOidcConnection(self, request, context):
+        """=== Per-organization OIDC SSO connections ===
+
+        CreateOrgOIDCConnection registers an upstream OIDC IdP for an organization.
+        client_secret is stored encrypted and never returned.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UpdateOrgOidcConnection(self, request, context):
+        """UpdateOrgOidcConnection updates an upstream OIDC connection. Supplying
+        client_secret rotates it; omitting leaves the stored secret intact.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteOrgOidcConnection(self, request, context):
+        """DeleteOrgOidcConnection deletes an upstream OIDC connection.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetOrgOidcConnection(self, request, context):
+        """GetOrgOidcConnection returns a single OIDC connection, looked up by
+        connection id OR org_id (supply exactly one).
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateOrgSamlConnection(self, request, context):
+        """=== Per-organization SAML SSO connections ===
+
+        CreateOrgSamlConnection registers an upstream SAML IdP for an organization.
+        Assertion signatures are validated ONLY against idp_certificate.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UpdateOrgSamlConnection(self, request, context):
+        """UpdateOrgSamlConnection updates an upstream SAML connection. Supplying
+        idp_certificate replaces it; omitting leaves the stored certificate intact.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteOrgSamlConnection(self, request, context):
+        """DeleteOrgSamlConnection deletes an upstream SAML connection.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetOrgSamlConnection(self, request, context):
+        """GetOrgSamlConnection returns a single SAML connection, looked up by
+        connection id OR org_id (supply exactly one).
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateScimEndpoint(self, request, context):
+        """=== Per-organization inbound SCIM ===
+
+        CreateScimEndpoint provisions an org's inbound SCIM connection and returns
+        its bearer token EXACTLY ONCE (only the bcrypt hash is stored). One
+        endpoint per organization.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def RotateScimToken(self, request, context):
+        """RotateScimToken mints a fresh SCIM bearer token, invalidating the previous
+        one, and returns it exactly once. Reuses CreateScimEndpointResponse — the
+        only other admin message carrying a secret.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteScimEndpoint(self, request, context):
+        """DeleteScimEndpoint removes an org's SCIM connection.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetScimEndpoint(self, request, context):
+        """GetScimEndpoint returns an org's SCIM endpoint metadata. The bearer token
+        is never surfaced here.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_AuthorizerAdminServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -993,6 +1347,136 @@ def add_AuthorizerAdminServiceServicer_to_server(servicer, server):
                     servicer.ImportSamlSpMetadata,
                     request_deserializer=authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataRequest.FromString,
                     response_serializer=authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataResponse.SerializeToString,
+            ),
+            'CreateOrganization': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateOrganization,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrganizationRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrganizationResponse.SerializeToString,
+            ),
+            'UpdateOrganization': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateOrganization,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationResponse.SerializeToString,
+            ),
+            'DeleteOrganization': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteOrganization,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationResponse.SerializeToString,
+            ),
+            'GetOrganization': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetOrganization,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrganizationRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrganizationResponse.SerializeToString,
+            ),
+            'Organizations': grpc.unary_unary_rpc_method_handler(
+                    servicer.Organizations,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.OrganizationsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.OrganizationsResponse.SerializeToString,
+            ),
+            'UserOrganizations': grpc.unary_unary_rpc_method_handler(
+                    servicer.UserOrganizations,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.UserOrganizationsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.UserOrganizationsResponse.SerializeToString,
+            ),
+            'AddOrgMember': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddOrgMember,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.AddOrgMemberRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.AddOrgMemberResponse.SerializeToString,
+            ),
+            'RemoveOrgMember': grpc.unary_unary_rpc_method_handler(
+                    servicer.RemoveOrgMember,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberResponse.SerializeToString,
+            ),
+            'OrgMembers': grpc.unary_unary_rpc_method_handler(
+                    servicer.OrgMembers,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.OrgMembersRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.OrgMembersResponse.SerializeToString,
+            ),
+            'RequestOrgDomain': grpc.unary_unary_rpc_method_handler(
+                    servicer.RequestOrgDomain,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainResponse.SerializeToString,
+            ),
+            'VerifyOrgDomain': grpc.unary_unary_rpc_method_handler(
+                    servicer.VerifyOrgDomain,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainResponse.SerializeToString,
+            ),
+            'AddVerifiedOrgDomain': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddVerifiedOrgDomain,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainResponse.SerializeToString,
+            ),
+            'OrgDomains': grpc.unary_unary_rpc_method_handler(
+                    servicer.OrgDomains,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.OrgDomainsRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.OrgDomainsResponse.SerializeToString,
+            ),
+            'DeleteOrgDomain': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteOrgDomain,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainResponse.SerializeToString,
+            ),
+            'CreateOrgOidcConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateOrgOidcConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionResponse.SerializeToString,
+            ),
+            'UpdateOrgOidcConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateOrgOidcConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionResponse.SerializeToString,
+            ),
+            'DeleteOrgOidcConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteOrgOidcConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionResponse.SerializeToString,
+            ),
+            'GetOrgOidcConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetOrgOidcConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionResponse.SerializeToString,
+            ),
+            'CreateOrgSamlConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateOrgSamlConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionResponse.SerializeToString,
+            ),
+            'UpdateOrgSamlConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateOrgSamlConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionResponse.SerializeToString,
+            ),
+            'DeleteOrgSamlConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteOrgSamlConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionResponse.SerializeToString,
+            ),
+            'GetOrgSamlConnection': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetOrgSamlConnection,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionResponse.SerializeToString,
+            ),
+            'CreateScimEndpoint': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateScimEndpoint,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.SerializeToString,
+            ),
+            'RotateScimToken': grpc.unary_unary_rpc_method_handler(
+                    servicer.RotateScimToken,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.RotateScimTokenRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.SerializeToString,
+            ),
+            'DeleteScimEndpoint': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteScimEndpoint,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointResponse.SerializeToString,
+            ),
+            'GetScimEndpoint': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetScimEndpoint,
+                    request_deserializer=authorizer_dot_v1_dot_admin__pb2.GetScimEndpointRequest.FromString,
+                    response_serializer=authorizer_dot_v1_dot_admin__pb2.GetScimEndpointResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -2403,6 +2887,708 @@ class AuthorizerAdminService(object):
             '/authorizer.v1.AuthorizerAdminService/ImportSamlSpMetadata',
             authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataRequest.SerializeToString,
             authorizer_dot_v1_dot_admin__pb2.ImportSamlSpMetadataResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateOrganization(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/CreateOrganization',
+            authorizer_dot_v1_dot_admin__pb2.CreateOrganizationRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.CreateOrganizationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def UpdateOrganization(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/UpdateOrganization',
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrganizationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteOrganization(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/DeleteOrganization',
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrganizationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetOrganization(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/GetOrganization',
+            authorizer_dot_v1_dot_admin__pb2.GetOrganizationRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.GetOrganizationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def Organizations(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/Organizations',
+            authorizer_dot_v1_dot_admin__pb2.OrganizationsRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.OrganizationsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def UserOrganizations(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/UserOrganizations',
+            authorizer_dot_v1_dot_admin__pb2.UserOrganizationsRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.UserOrganizationsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def AddOrgMember(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/AddOrgMember',
+            authorizer_dot_v1_dot_admin__pb2.AddOrgMemberRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.AddOrgMemberResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def RemoveOrgMember(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/RemoveOrgMember',
+            authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.RemoveOrgMemberResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def OrgMembers(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/OrgMembers',
+            authorizer_dot_v1_dot_admin__pb2.OrgMembersRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.OrgMembersResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def RequestOrgDomain(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/RequestOrgDomain',
+            authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.RequestOrgDomainResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def VerifyOrgDomain(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/VerifyOrgDomain',
+            authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.VerifyOrgDomainResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def AddVerifiedOrgDomain(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/AddVerifiedOrgDomain',
+            authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.AddVerifiedOrgDomainResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def OrgDomains(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/OrgDomains',
+            authorizer_dot_v1_dot_admin__pb2.OrgDomainsRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.OrgDomainsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteOrgDomain(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/DeleteOrgDomain',
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgDomainResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateOrgOidcConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/CreateOrgOidcConnection',
+            authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.CreateOrgOidcConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def UpdateOrgOidcConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/UpdateOrgOidcConnection',
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrgOidcConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteOrgOidcConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/DeleteOrgOidcConnection',
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgOidcConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetOrgOidcConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/GetOrgOidcConnection',
+            authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.GetOrgOidcConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateOrgSamlConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/CreateOrgSamlConnection',
+            authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.CreateOrgSamlConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def UpdateOrgSamlConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/UpdateOrgSamlConnection',
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.UpdateOrgSamlConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteOrgSamlConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/DeleteOrgSamlConnection',
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.DeleteOrgSamlConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetOrgSamlConnection(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/GetOrgSamlConnection',
+            authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.GetOrgSamlConnectionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateScimEndpoint(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/CreateScimEndpoint',
+            authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def RotateScimToken(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/RotateScimToken',
+            authorizer_dot_v1_dot_admin__pb2.RotateScimTokenRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.CreateScimEndpointResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteScimEndpoint(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/DeleteScimEndpoint',
+            authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.DeleteScimEndpointResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetScimEndpoint(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/authorizer.v1.AuthorizerAdminService/GetScimEndpoint',
+            authorizer_dot_v1_dot_admin__pb2.GetScimEndpointRequest.SerializeToString,
+            authorizer_dot_v1_dot_admin__pb2.GetScimEndpointResponse.FromString,
             options,
             channel_credentials,
             insecure,
