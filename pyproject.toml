@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "authorizer-proto"
-version = "0.1.0"
+version = "0.2.0rc0"
 description = "Generated protobuf/gRPC Python stubs for the Authorizer auth server API (authorizer.v1)"
 readme = "README.md"
 requires-python = ">=3.9"
