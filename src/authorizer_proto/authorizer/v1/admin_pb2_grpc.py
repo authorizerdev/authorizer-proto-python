@@ -473,7 +473,7 @@ class AuthorizerAdminServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DeleteUser(self, request, context):
-        """DeleteUser deletes a user (and associated OTP/verification data) by email.
+        """DeleteUser deletes a user (and associated OTP/verification data) by id.
         Requires super-admin auth.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
